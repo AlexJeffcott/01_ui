@@ -1,0 +1,26 @@
+version: "3.5"
+services:
+  01_ui_eu:
+    build:
+      context: .
+      args:
+        GIT_DEPLOY_KEY: 123123
+    image: 01_ui
+    networks:
+      - default
+    ports:
+      - "3000:3000"
+    environment:
+      REACT_APP_GREETING: goodbye
+  01_ui_us:
+    build:
+      context: .
+      args:
+        GIT_DEPLOY_KEY: 123123
+    image: 01_ui
+    networks:
+      - default
+    ports:
+      - "3001:3000"
+    environment:
+      REACT_APP_GREETING: byeUS

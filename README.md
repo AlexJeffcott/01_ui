@@ -11,40 +11,56 @@
     ```bash
     touch .dockerignore
     echo "node_modules" >> .dockerignore
-    touch Dockerfile
+    vim Dockerfile
     ```
 - add the following contents and save with :wq
-
   ```bash
-    # base image
-    FROM node:12.2.0-alpine
-
-    # set working directory
-    WORKDIR /app
-
-    # add `/app/node_modules/.bin` to $PATH
-    ENV PATH /app/node_modules/.bin:$PATH
-
-    # install and cache app dependencies
-    COPY package.json /app/package.json
-    RUN npm install --silent
-    RUN npm install react-scripts@3.0.1 -g --silent
-
-    # start app
-    CMD ["npm", "start"]
+    FROM node:12.14.0-alpine
+    WORKDIR /app 
+    COPY package.json package-lock.json ./
+    RUN npm install
+    COPY public public
+    COPY src src
+    CMD ["npm", "run", "start"]
   ```
-
+    ```bash
+    vim dockerfile-compose.yml
+    ```
+- add the following contents and save with :wq
+  ```bash
+    version: "0.1"
+    services:
+      01_ui_eu:
+        build:
+          context: .
+        image: "01_ui"
+        ports:
+          - "3000:3000"
+        environment:
+          REACT_APP_LOCALE: "eu"
+      01_ui_us:
+        build:
+          context: .
+        image: "01_ui"
+        ports:
+          - "3001:3000"
+        environment:
+          REACT_APP_LOCALE: "us"
+  ```
   - replace the "eject" script wit the following scripts in package.json
 
   ```bash
-    "docker:build": "docker build -t dockerisedcrats:dev .",
-    "docker:run": "docker run -v ${PWD}:/app -v /app/node_modules -p 3001:3000 --rm dockerisedcrats:dev"
+    "docker:build:eu": "docker-compose --file docker-compose.yml build 01_ui_eu",
+    "docker:run:eu": "docker-compose up 01_ui_eu",
+    "docker:build:us": "docker-compose --file docker-compose.yml build 01_ui_us",
+    "docker:run:us": "docker-compose up 01_ui_us"
   ```
 
 - then run
   ```bash
     rm -r node_modules
-    npm run docker:build
+    docker:build:eu
+    docker:run:eu
   ```
-- open localhost:3001
+- open localhost:3000
 

@@ -1,18 +1,18 @@
 version: "3.7"
 services:
-  01_ui_eu:
+  01_ui_service1:
     build:
       context: .
     image: "01_ui"
     ports:
       - "3000:3000"
     environment:
-      REACT_APP_LOCALE: "eu"
-  01_ui_us:
+      REACT_APP_SERVICE_NAME: "1"
+  01_ui_service2:
     build:
       context: .
     image: "01_ui"
     ports:
       - "3001:3000"
     environment:
-      REACT_APP_LOCALE: "us"
+      REACT_APP_SERVICE_NAME: "2"

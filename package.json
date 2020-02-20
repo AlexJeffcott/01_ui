@@ -14,10 +14,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "docker:build:eu": "docker-compose --file docker-compose.yml build 01_ui_eu",
-    "docker:run:eu": "docker-compose up 01_ui_eu",
-    "docker:build:us": "docker-compose --file docker-compose.yml build 01_ui_us",
-    "docker:run:us": "docker-compose up 01_ui_us"
+    "docker:build:1": "docker-compose --file docker-compose.yml build 01_ui_service1",
+    "docker:run:1": "docker-compose up 01_ui_service1",
+    "docker:build:2": "docker-compose --file docker-compose.yml build 01_ui_service2",
+    "docker:run:2": "docker-compose up 01_ui_service2"
   },
   "eslintConfig": {
     "extends": "react-app"

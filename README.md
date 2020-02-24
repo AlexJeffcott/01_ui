@@ -1,5 +1,40 @@
 # 01_UI
-
+## Scope and aims of the 01 project
+- To create a frame project which encompasses a 'true' end to end development with production/scaling ready code, infra and archetecture
+- Acceptance criteria:
+    1. React application with all the benefits of CRA plus:
+        1. client-side routing
+        1. auth routes (guest-first-approach)
+        1. SEO optimisation
+        1. style theming and layouting
+        1. e2e and API testing (local and in ci)
+        1. unit testing (local and in ci)
+        1. linting (local and in ci)
+        1. dockerised (local and in ci)
+        1. all dependencies and env vars passed through top level of app and provided via context
+        1. has it's own repo (01_ui)
+        1. all api calls have mocks controlled via env var
+        1. responsive design
+        1. onboarding/tutorial mechanic
+        1. translation-ready
+        1. accessible
+        1. text content and images and svg icons are served by cdn
+        1. error boundaries
+        1. error logging via, for example, Sentry
+        1. tracking
+        1. has 3 main branches plus 'story' branches:
+            - master
+            - develop_static (up-to-date with master plus Gatsby, for example)
+            - develop_ssr (up-to-date with master plus ssr)
+    1. auth service
+    1. tracking service
+    1. API
+    1. user service
+        1. has own database
+    1. entity service
+        1. has own database
+        1. has caching (for example Redis)
+        
 ## This is the web UI part of project 01
 ### Pre-requestites
 - install the following if you haven't yet
@@ -15,6 +50,7 @@
     cp /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash ~/.git_completion.bash
     cp /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh ~/.git_prompt.sh
     ```
+- go to https://docs.docker.com/docker-for-mac/install/ and install docker client
 - add the following to ~/.bash_profile
     ```bash
     source ~/.git_completion.bash
@@ -120,3 +156,26 @@
     hub create
     git push -u origin HEAD
     ```
+
+- go to https://www.virtualbox.org/wiki/Downloads and install the latest
+  # https://kubernetes.io/docs/tasks/tools/install-minikube/
+    brew install kubectl
+    kubectl version --client
+    brew install minikube
+    minikube start --vm-driver=virtualbox
+    minikube status
+  # should get:
+    # host: Running
+    # kubelet: Running
+    # apiserver: Running
+    # kubeconfig: Configured
+    kubectl create deployment hello-minikube --image=k8s.gcr.io/echoserver:1.10
+    # deployment.apps/hello-minikube created
+    kubectl expose deployment hello-minikube --type=NodePort --port=8080
+    # service/hello-minikube exposed
+    kubectl get pod
+    # hello-minikube-3383150820-vctvh   0/1       ContainerCreating   0          3s
+    minikube service hello-minikube --url
+    # paste the url into the browser to view the service info 
+    minikube dashboard
+    

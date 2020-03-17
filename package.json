@@ -6,6 +6,9 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",
+    "axios": "^0.19.2",
+    "lodash.get": "^4.4.2",
+    "lodash.shuffle": "^4.2.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.4.0"
@@ -14,11 +17,14 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "docker:build:1": "docker-compose --file docker-compose.yml build 01_ui_service1",
-    "docker:run:1": "docker-compose up 01_ui_service1",
-    "docker:build:2": "docker-compose --file docker-compose.yml build 01_ui_service2",
-    "docker:run:2": "docker-compose up 01_ui_service2",
-    "docker:nuke": "docker image prune --all"
+    "docker:build:envA": "docker-compose --file docker-compose.yml build 01_ui_env_a",
+    "docker:run:envA": "docker-compose up 01_ui_env_a",
+    "docker:test:envA": "docker-compose exec -T 01_ui_env_a npm run test",
+    "docker:build:envB": "docker-compose --file docker-compose.yml build 01_ui_env_b",
+    "docker:run:envB": "docker-compose up 01_ui_env_b",
+    "docker:test:envB": "docker-compose exec -T 01_ui_env_b npm run test",
+    "docker:nuke": "docker image prune --all",
+    "docker:superNuke": "docker system prune"
   },
   "eslintConfig": {
     "extends": "react-app"

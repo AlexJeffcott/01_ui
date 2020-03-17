@@ -116,37 +116,37 @@
     ```yaml
     version: "0.1"
     services:
-      01_ui_eu:
+      01_ui_env_a:
         build:
           context: .
         image: "01_ui"
         ports:
           - "3000:3000"
         environment:
-          REACT_APP_LOCALE: "eu"
-      01_ui_us:
+          REACT_APP_ENVIRONMENT: "a"
+      01_ui_env_b:
         build:
           context: .
         image: "01_ui"
         ports:
           - "3001:3000"
         environment:
-          REACT_APP_LOCALE: "us"
+          REACT_APP_ENVIRONMENT: "b"
     ```
 
 - replace the "eject" script wit the following scripts in package.json
     ```bash
-    "docker:build:eu": "docker-compose --file docker-compose.yml build 01_ui_eu",
-    "docker:run:eu": "docker-compose up 01_ui_eu",
-    "docker:build:us": "docker-compose --file docker-compose.yml build 01_ui_us",
-    "docker:run:us": "docker-compose up 01_ui_us"
+    "docker:build:envA": "docker-compose --file docker-compose.yml build 01_ui_env_a",
+    "docker:run:envA": "docker-compose up 01_ui_env_a",
+    "docker:build:envB": "docker-compose --file docker-compose.yml build 01_ui_env_b",
+    "docker:run:envB": "docker-compose up 01_ui_env_b"
     ```
 
 - then run
     ```bash
     rm -r node_modules
-    docker:build:eu
-    docker:run:eu
+    docker:build:envA
+    docker:run:envA
     ```
 
 - check it works by opening localhost:3000 in your browser.
@@ -157,8 +157,9 @@
     git push -u origin HEAD
     ```
 
-- go to https://www.virtualbox.org/wiki/Downloads and install the latest
-  # https://kubernetes.io/docs/tasks/tools/install-minikube/
+### this next part is about Kubenetes
+- go to https://www.virtualbox.org/wiki/Downloads and install the latest. https://kubernetes.io/docs/tasks/tools/install-minikube/
+    ```bash
     brew install kubectl
     kubectl version --client
     brew install minikube
@@ -178,4 +179,4 @@
     minikube service hello-minikube --url
     # paste the url into the browser to view the service info 
     minikube dashboard
-    
+    ```

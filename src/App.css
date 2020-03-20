@@ -1,12 +1,86 @@
-.App {
+body {
   text-align: center;
+  text-transform: uppercase;
+}
+
+.correct {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: lightgreen;
+}
+
+.incorrect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: indianred;
 }
 
 .icon {
-  height: 50px;
-  width: 50px;
+  height: 100%;
+  width: 100%;
 }
 
 .selected {
-  filter: drop-shadow(0 0 0.75rem dimgrey)
+  filter: drop-shadow(0 0 0.75rem dodgerblue)
 }
+
+.selectedBtn {
+  background-color: lightgray;
+}
+
+.submitBtn {
+  height: 2rem;
+  width: 30rem;
+}
+
+.langSelectWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 6rem;
+  margin-top: 10rem;
+}
+
+.langSelectWrapper > button {
+  height: 1rem;
+  width: 6rem;
+  margin: 0.25rem;
+}
+
+.gameTypeSelectWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 6rem;
+}
+
+.gameTypeSelectWrapper > button {
+  height: 1rem;
+  width: 6rem;
+  margin: 0.25rem;
+}
+
+.answerWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 30rem;
+}
+
+.answerWrapper > div {
+  height: 10rem;
+  width: 10rem;
+  margin: 1rem;
+}
+

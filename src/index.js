@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom'
 import get from 'lodash.get'
 import shuffle from 'lodash.shuffle'
 // import axios from 'axios'
+// import store from 'store'
 import './index.css'
 import Api from './Api'
 import * as serviceWorker from './serviceWorker'
-import { questions, imgs, audio } from './__mocks__'
+import { questions } from './__mocks__'
 
 const envs = {
     NODE_ENV: process.env.NODE_ENV,
@@ -16,13 +17,12 @@ const envs = {
 const deps = {
     get,
     shuffle,
-    httpClient: null
+    httpClient: null,
+    // store,
 }
 
 const mocks = {
     questions,
-    imgs,
-    audio
 }
 
 const reducer = (state, action) => {

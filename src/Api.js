@@ -9,7 +9,7 @@ const Api = ({ actions }) => {
         ...actions,
         getQs: (num=10) => httpClient ? httpClient(`api/questions?${num}`) : getMock("questions").slice(0, num),
         getQById: id => httpClient ? httpClient(`api/questions/${id}`) : getMock("questions").find(i => i.id === id),
-        getAnswers: id => httpClient ? httpClient(`api/answers/${id}`) : getMock("questions").slice(0, 4).filter(i => i.id !== id).filter(Boolean),
+        getAnswers: id => httpClient ? httpClient(`api/answers/${id}`) : getMock("questions").filter(i => i.id && i.id !== id).slice(0, 3),
         getImgById: id => httpClient ? httpClient(`api/imgs/${id}`) : getMock("imgs")[id],
         getAudioById: id => httpClient ? httpClient(`api/audio/${id}`) : getMock("audio")[id],
     }

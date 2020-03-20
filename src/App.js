@@ -20,17 +20,24 @@ const App = ({ actions }) => {
     const [gameType, setGameType] = React.useState("audioimg")
     const [selected, setSelected] = React.useState(null)
     const [answered, setAnswered] = React.useState("")
-    const [userName, setUserName] = React.useState("leo")
+    const [userName, setUserName] = React.useState("alex")
 
     // eslint-disable-next-line no-unused-vars
     const { id, text_en, text_it, text_de, audioId_en, audioId_it, audioId_de, imgId } = q || {}
-    console.log(`!!`, { userName })
-    const cachedScores = userName ? localStorage.getItem(userName) : {}
-    const [scores, setScores] = React.useState(cachedScores && JSON.parse(cachedScores))
 
+    const [scores, setScores] = React.useState({})
     React.useEffect(() => {
-        if (userName && scores) localStorage.setItem(userName, JSON.stringify(scores))
-    }, [userName, scores])
+        const items = localStorage.getItem(userName)
+        if (items) {
+            setScores(JSON.parse(items))
+        } else {
+            setScores({})
+        }
+    }, [userName])
+
+    // React.useEffect(() => {
+    //     if (userName && scores) localStorage.setItem(userName, JSON.stringify(scores))
+    // }, [userName, scores])
 
     React.useEffect(() => setQs(getQs(10)), [getQs])
     React.useEffect(() => setQ(qs[qIndex]), [qIndex, qs])
@@ -50,21 +57,25 @@ const App = ({ actions }) => {
             setSelected(null)
             setTimeout(() => setAnswered(""), 1000)
         } else if (_selected === id) {
-            setScores({
+            const newScores = {
                 ...scores,
                 [id]: scores[id] ? scores[id] + 1 : 1
-            })
+            }
+            setScores(newScores)
             setAnswered("correct")
             setSelected(null)
             setTimeout(() => setAnswered(""), 1000)
+            localStorage.setItem(userName, JSON.stringify(newScores))
         } else {
-            setScores({
+            const newScores = {
                 ...scores,
                 [id]: scores[id] ? scores[id] - 1 : -1
-            })
+            }
+            setScores(newScores)
             setAnswered("incorrect")
             setSelected(null)
             setTimeout(() => setAnswered(""), 1000)
+            localStorage.setItem(userName, JSON.stringify(newScores))
         }
         setQIndex(qIndex + 1)
     }
@@ -141,7 +152,7 @@ const App = ({ actions }) => {
               )})}
               {userName && gameType === "audioimg" && answers.map((answer, k) => {
                   return (
-                  <div key={k} className={selected === answer.id ? "selected" : ""}>
+                  <div key={`${answer.id}_${k}`} className={selected === answer.id ? "selected" : ""}>
                       <img
                           onClick={() => handlePlayAudio(answer, handleSetSelected)}
                           className="icon"
@@ -163,6 +174,7 @@ const App = ({ actions }) => {
               <button className={gameType === "audio" ? "selectedBtn" : ""} onClick={() => handleChangeGameType("audio")}>audio</button>
               <button className={gameType === "img" ? "selectedBtn" : ""} onClick={() => handleChangeGameType("img")}>image</button>
           </div>
+          {scores && Object.entries(scores).map((s, k) => <p key={k}>{`${s[0]}: ${s[1]}`}</p>)}
     </div>
   )
 }

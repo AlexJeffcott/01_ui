@@ -1,0 +1,17 @@
+apple mela Apfel
+arm braccio Arm
+bag borsa Tasche
+ball palla Ball
+bat pipistrello Schläger
+bear orso Bär
+cup tazza Tasse
+car auto Auto
+cat gatto Katze
+dinosaur dinosauro Dinosaurier
+dog cane Hund
+elephant elefante Elefant
+fox volpe Fuchs
+hat cappello Hut
+milk latte Milch
+robot robot Roboter
+snake serpente Schlange

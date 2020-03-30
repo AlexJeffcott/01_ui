@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9e9f6cdf01cb07399f169815b65d2128",
+    "revision": "81d7e51155303b98159bc418bbc0f199",
     "url": "/01_ui/index.html"
   },
   {
-    "revision": "46e3187c9114aeccce63",
-    "url": "/01_ui/static/css/main.667574f2.chunk.css"
+    "revision": "87de2f17194f075ad9e3",
+    "url": "/01_ui/static/css/main.cf069482.chunk.css"
   },
   {
     "revision": "3d60969fb8fb02a96943",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/01_ui/static/js/2.d5d281f2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "46e3187c9114aeccce63",
-    "url": "/01_ui/static/js/main.58730630.chunk.js"
+    "revision": "87de2f17194f075ad9e3",
+    "url": "/01_ui/static/js/main.6d26e890.chunk.js"
   },
   {
     "revision": "2913a2113bd175812678",
@@ -120,8 +120,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/01_ui/static/media/bat.6fc35527.png"
   },
   {
-    "revision": "63a92ccf1cd5869918416b4ac1ea7f31",
-    "url": "/01_ui/static/media/bat_de.63a92ccf.mp3"
+    "revision": "8b4d60c18a50f6aa8a55da40ec6094cf",
+    "url": "/01_ui/static/media/bat_de.8b4d60c1.mp3"
   },
   {
     "revision": "8868c4648f3a57b15be3b47ea05b4c95",
@@ -704,16 +704,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/01_ui/static/media/pants.f88276b4.png"
   },
   {
-    "revision": "97da7a7e5acbeb4d95c0df26a5438ee4",
-    "url": "/01_ui/static/media/pants_de.97da7a7e.mp3"
+    "revision": "111f950494d5ec96a778ad119418eac6",
+    "url": "/01_ui/static/media/pants_de.111f9504.mp3"
   },
   {
     "revision": "23694c72e73d4c62f989906107e8108b",
     "url": "/01_ui/static/media/pants_en.23694c72.mp3"
   },
   {
-    "revision": "b15df2689d9758be977feb83ec821d1c",
-    "url": "/01_ui/static/media/pants_it.b15df268.mp3"
+    "revision": "3a2ae9ab256eb3447a6d54ec00ed8e65",
+    "url": "/01_ui/static/media/pants_it.3a2ae9ab.mp3"
   },
   {
     "revision": "e53b266d3ac1644e88c2a80c9ed4e21f",
@@ -940,16 +940,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/01_ui/static/media/square.2ff18fc6.png"
   },
   {
-    "revision": "fbb103c0767f783d376705e1b523186e",
-    "url": "/01_ui/static/media/square_de.fbb103c0.mp3"
+    "revision": "f0b29039b8873cd9b718fc3c99d495a1",
+    "url": "/01_ui/static/media/square_de.f0b29039.mp3"
   },
   {
     "revision": "c863a86f01d11d54dac16a17aa00b7fc",
     "url": "/01_ui/static/media/square_en.c863a86f.mp3"
   },
   {
-    "revision": "996041bc2e33a6ea0896a83324e5a4d2",
-    "url": "/01_ui/static/media/square_it.996041bc.mp3"
+    "revision": "7f49f33d3589719c30ff2acbd47bed63",
+    "url": "/01_ui/static/media/square_it.7f49f33d.mp3"
   },
   {
     "revision": "724781aa8b8ea45a75c257daa1d1d8c6",

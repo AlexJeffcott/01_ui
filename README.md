@@ -180,3 +180,9 @@
     # paste the url into the browser to view the service info 
     minikube dashboard
     ```
+  
+  
+  
+  `docker ps -a -q | xargs docker rm` then `docker images -a -q | xargs docker rmi -f`
+  `docker system prune`
+  `docker image prune -a`

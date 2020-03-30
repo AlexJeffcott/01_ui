@@ -1,195 +1,173 @@
 import React from 'react'
 import './App.css'
-import { imgs, audio } from './assets'
+import { audio } from './assets'
+import { UserSelect, TextToAudioImg, AudioImgToText } from './gameTypes'
 
-const users = [
-    {id: "leo", imgId: "cat"},
-    {id: "alex", imgId: "dog"},
-    {id: "elisa", imgId: "fox"},
-    ]
+const App = ({ states, dispatchers, actionDefs, api }) => {
+  // eslint-disable-next-line no-unused-vars
+  const { getQs, getAnswers } = api
 
-const App = ({ actions }) => {
-    const { getQs, getAnswers, getDeps } = actions
-    const { shuffle } = getDeps()
+  const { shuffle } = states.envsDepsMocksState.deps
+  const { settingsDispatcher } = dispatchers
+  const { lang, gameType, userName, course } = states.settingsState
+  const {
+    setGameTypeUserSelect,
+    setGameTypeTextToAudioImg,
+    setUserNameToCat,
+    setUserNameToFox,
+    setUserNameToDog,
+    setUserNameToMonkey,
+  } = actionDefs.settingsActionDefs
 
-    const [qs, setQs] = React.useState([])
-    const [q, setQ] = React.useState({})
-    const [answers, setAnswers] = React.useState([])
-    const [qIndex, setQIndex] = React.useState(0)
-    const [lang, setLang] = React.useState("en")
-    const [gameType, setGameType] = React.useState("audioimg")
-    const [selected, setSelected] = React.useState(null)
-    const [answered, setAnswered] = React.useState("")
-    const [userName, setUserName] = React.useState("")
+  const [qs, setQs] = React.useState([])
+  const [q, setQ] = React.useState({})
+  const [answers, setAnswers] = React.useState([])
+  const [qIndex, setQIndex] = React.useState(0)
+  const [selected, setSelected] = React.useState(null)
+  const [answered, setAnswered] = React.useState('')
 
-    // eslint-disable-next-line no-unused-vars
-    const { id, text_en, text_it, text_de, audioId_en, audioId_it, audioId_de, imgId } = q || {}
+  const [scores, setScores] = React.useState({})
 
-    const [scores, setScores] = React.useState({})
-    React.useEffect(() => {
-        const items = localStorage.getItem(userName)
-        if (items) {
-            setScores(JSON.parse(items))
-        } else {
-            setScores({})
-        }
-    }, [userName])
+  React.useEffect(() => {
+    const items = localStorage.getItem(userName)
+    if (items) {
+      setScores(JSON.parse(items))
+    } else {
+      setScores({})
+    }
+  }, [userName])
 
-    React.useEffect(() => setQs(getQs(10)), [getQs])
+  React.useEffect(() => setQs(getQs(10, course)), [getQs])
 
-    React.useEffect(() => setQ(qs[qIndex]), [qIndex, qs])
+  React.useEffect(() => setQ(qs[qIndex]), [qIndex, qs])
 
-    React.useEffect(() => {
-        const createAnswers = () => {
-            const _answers = shuffle([q, ...getAnswers(id)])
-            console.log(`!!`, { _answers })
-            setAnswers(_answers)
-        }
-        if (q) createAnswers()
-    }, [getAnswers, id, q, shuffle])
+  React.useEffect(() => {
+    const createAnswers = () => {
+      const _answers = shuffle([q, ...shuffle(qs.filter(_q => _q.id !== q.id)).slice(0, 3)])
+      setAnswers(_answers)
+    }
+    if (q) createAnswers()
+  }, [q, shuffle])
 
-    const handleSubmit = _selected => {
-        console.log(`!!`, { _selected })
-        if (users.some(u => u.id === _selected)) {
-            setUserName(_selected)
-            setSelected(null)
-            setTimeout(() => setAnswered(""), 1000)
-        } else if (_selected === id) {
-            const newScores = {
-                ...scores,
-                [id]: scores[id] ? scores[id] + 1 : 1
-            }
-            setScores(newScores)
-            setAnswered("correct")
-            setSelected(null)
-            setTimeout(() => setAnswered(""), 1000)
-            localStorage.setItem(userName, JSON.stringify(newScores))
-        } else {
-            const newScores = {
-                ...scores,
-                [id]: scores[id] ? scores[id] - 1 : -1
-            }
-            setScores(newScores)
-            setAnswered("incorrect")
-            setSelected(null)
-            setTimeout(() => setAnswered(""), 1000)
-            localStorage.setItem(userName, JSON.stringify(newScores))
-        }
+  const handleSubmit = _selected => {
+    if (!_selected) return undefined
+
+    const goToNextQ = () => {
+      if (qIndex === qs.length - 1) {
+        settingsDispatcher(setGameTypeUserSelect)
+        setAnswered('')
+        setSelected(null)
+        setQIndex(0)
+      } else {
+        setAnswered('')
+        setSelected(null)
         setQIndex(qIndex + 1)
-    }
-    const handleChangeLang = _lang => {
-        console.log(`!!`, { _lang })
-        setLang(_lang)
-    }
-    const handleChangeGameType = _gameType => {
-        console.log(`!!`, { _gameType })
-        setGameType(_gameType)
-    }
-    const handleSetSelected = _selected => {
-        console.log(`!!`, { _selected, selected })
-        if (_selected === selected) {
-            setSelected(null)
-        } else {
-            setSelected(_selected)
-        }
-    }
-    const handlePlayAudio = (_answer, cb, _lang) => {
-        if (_answer.id !== selected) {
-            const src = audio[getAudioId(_lang, _answer.id)]
-            const audioElement = src && new Audio(src)
-            audioElement.play().then(() => cb(_answer.id))
-        } else {
-            cb(_answer.id)
-        }
+      }
     }
 
-    const getText = React.useCallback((_lang) => {
-        switch (_lang) {
-            case 'en':
-                return text_en
-            case 'it':
-                return text_it
-            case 'de':
-                return text_de
-            default:
-                return console.error(`value of _lang is: ${_lang}`)
-        }
-    }, [text_de, text_en, text_it])
+    if (gameType === 'userSelect') {
+      if (_selected === 'cat') settingsDispatcher(setUserNameToCat)
+      if (_selected === 'fox') settingsDispatcher(setUserNameToFox)
+      if (_selected === 'dog') settingsDispatcher(setUserNameToDog)
+      if (_selected === 'monkey') settingsDispatcher(setUserNameToMonkey)
+      setTimeout(() => {
+        goToNextQ()
+        settingsDispatcher(setGameTypeTextToAudioImg)
+      }, 1000)
+    } else if (_selected === q.id) {
+      const newScores = {
+        ...scores,
+        [q.id]: scores[q.id] ? scores[q.id] + 1 : 1,
+      }
+      setScores(newScores)
+      localStorage.setItem(userName, JSON.stringify(newScores))
+      setAnswered('correct')
+      setTimeout(goToNextQ, 2000)
+    } else {
+      const newScores = {
+        ...scores,
+        [q.id]: scores[q.id] ? scores[q.id] - 1 : -1,
+      }
+      setScores(newScores)
+      setAnswered('incorrect')
+      localStorage.setItem(userName, JSON.stringify(newScores))
+      setTimeout(goToNextQ, 2000)
+    }
+  }
 
-    const getAudioId = React.useCallback((_lang, answerId) => {
-        switch (_lang) {
-            case 'en':
-                return `${answerId}_en`
-            case 'it':
-                return `${answerId}_it`
-            case 'de':
-                return `${answerId}_de`
-            default:
-                return console.error(`value of _lang is: ${_lang}`)
-        }
-    }, [])
+  const handleSetSelected = _selected => {
+    if (_selected === selected) {
+      // setSelected(null)
+      return undefined
+    } else {
+      setSelected(_selected)
+    }
+  }
 
+  const handlePlayAudio = (_id, cb, _lang) => {
+    // if (_id !== selected) {
+    //   const src = audio[getAudioId(_lang, _id)]
+    //   const audioElement = src && new Audio(src)
+    //   audioElement.play().then(() => cb(_id))
+    // } else {
+    //   cb(_id)
+    // }
 
-    if (answered) return <div className={answered}><h1>{answered === "correct" ? "That's right!!!" : "Better luck next time!!!"}</h1></div>
-    return (
-      <div>
-        <h1>{userName ? getText(lang) : `choose your animal!`}</h1>
-        <div className="answerWrapper">
-            {!userName && users.map((u, k) =>
-                <div key={k} className={selected === u.id ? "selected" : ""}>
-                    <img
-                        onClick={() => handleSetSelected(u.id)}
-                        className="icon"
-                        src={imgs[u.imgId]}
-                        alt={u.imgId}
-                    />
-                </div>
-            )}
-            {userName && gameType === "img" && answers.map((answer, k) =>
-                <div key={k} className={selected === answer.id ? "selected" : ""}>
-                    <img
-                        onClick={() => handleSetSelected(answer.id)}
-                        className="icon"
-                        src={imgs[answer.imgId]}
-                        alt={answer.imgId}
-                    />
-                </div>
-            )}
-            {userName && gameType === "audio" && answers.map((answer, k) =>
-                <div key={k} className={selected === answer.id ? "selected" : ""}>
-                  <button
-                      onClick={() => handlePlayAudio(answer, handleSetSelected, lang)}
-                      className="icon"
-                  >
-                      PLAY
-                  </button>
-              </div>
-            )}
-            {userName && gameType === "audioimg" && answers.map((answer, k) =>
-              <div key={`${answer.id}_${k}`} className={selected === answer.id ? "selected" : ""}>
-                  <img
-                      onClick={() => handlePlayAudio(answer, handleSetSelected, lang)}
-                      className="icon"
-                      src={imgs[answer.imgId]}
-                      alt={answer.imgId}
-                  />
-              </div>
-            )}
-      </div>
-      <button disabled={!selected} className="submitBtn" onClick={() => handleSubmit(selected)}>
-          SUBMIT
+    const src = audio[getAudioId(_lang, _id)]
+    const audioElement = src && new Audio(src)
+    audioElement.play().then(() => cb(_id))
+  }
+
+  const getAudioId = React.useCallback((_lang, answerId) => {
+    switch (_lang) {
+      case 'en':
+        return `${answerId}_en`
+      case 'it':
+        return `${answerId}_it`
+      case 'de':
+        return `${answerId}_de`
+      default:
+        return console.error(`value of _lang is: ${_lang}`)
+    }
+  }, [])
+
+  return (
+    <div>
+      {gameType === 'userSelect' && (
+        <UserSelect selected={selected} handleSetSelected={handleSetSelected} lang={lang} />
+      )}
+      {gameType === 'textToAudioImg' && (
+        <TextToAudioImg
+          answered={answered}
+          q={q}
+          answers={answers}
+          selected={selected}
+          handleSetSelected={handleSetSelected}
+          handlePlayAudio={handlePlayAudio}
+          lang={lang}
+        />
+      )}
+      {gameType === 'audioImgToText' && (
+        <AudioImgToText
+          answered={answered}
+          q={q}
+          answers={answers}
+          selected={selected}
+          handleSetSelected={handleSetSelected}
+          handlePlayAudio={handlePlayAudio}
+          lang={lang}
+        />
+      )}
+      <button
+        disabled={!selected}
+        className={`
+            submitBtn
+            ${answered}
+          `}
+        onClick={() => handleSubmit(selected)}
+      >
+        O
       </button>
-          <div className="langSelectWrapper">
-              <button className={lang === "en" ? "selectedBtn" : ""} onClick={() => handleChangeLang("en")}>en</button>
-              <button className={lang === "de" ? "selectedBtn" : ""} onClick={() => handleChangeLang("de")}>de</button>
-              <button className={lang === "it" ? "selectedBtn" : ""} onClick={() => handleChangeLang("it")}>it</button>
-          </div>
-          <div className="gameTypeSelectWrapper">
-              <button className={gameType === "audioimg" ? "selectedBtn" : ""} onClick={() => handleChangeGameType("audioimg")}>audio image</button>
-              <button className={gameType === "audio" ? "selectedBtn" : ""} onClick={() => handleChangeGameType("audio")}>audio</button>
-              <button className={gameType === "img" ? "selectedBtn" : ""} onClick={() => handleChangeGameType("img")}>image</button>
-          </div>
-          {scores && Object.entries(scores).map((s, k) => <p key={k}>{`${s[0]}: ${s[1]}`}</p>)}
     </div>
   )
 }

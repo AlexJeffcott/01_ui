@@ -1,0 +1,20 @@
+version: "3.7"
+services:
+  01_ui_env_a:
+    build:
+      context: .
+    volumes:
+      - /app/node_modules
+      - ./src:/app/src
+      - .:/app
+    image: "01_ui"
+    environment:
+      REACT_APP_ENVIRONMENT: "a"
+    command: npm run build && npm run deploy
+  01_ui_env_b:
+    build:
+      context: .
+    image: "01_ui"
+    environment:
+      REACT_APP_ENVIRONMENT: "b"
+    command: npm run deploy

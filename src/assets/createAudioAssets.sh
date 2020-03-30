@@ -1,8 +1,8 @@
 #!/bin/sh
 
 ################## create mock questions object #################
-#rm -f ../__mocks__/index.js
-#echo "export const questions = [" > ../__mocks__/index.js
+#rm -f ../__mocks__/questions.js
+#echo "export const questions = [" > ../__mocks__/questions.js
 #while read line; do
 #  read en it de <<< "$( echo "${line}" | awk "{print $1 $2 $3}" )"
 #  echo "  {

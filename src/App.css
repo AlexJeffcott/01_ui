@@ -106,7 +106,7 @@ h1 {
 
 .submitBtn {
   position: fixed;
-  bottom: 30%;
+  bottom: 15%;
   left: 0;
   right: 0;
   width: 100%;
@@ -117,6 +117,7 @@ h1 {
 .answerWrapperTextToAudioImg > div {
   background-color: whitesmoke;
   width: 100%;
+  max-width: 200px;
   padding: 0.2rem;
   margin: 0.2rem;
   border: grey 1px solid;
@@ -139,4 +140,5 @@ h1 {
   background-color: whitesmoke;
   width: 47%;
   margin: 0.2rem;
+  max-width: 200px;
 }

@@ -71,7 +71,6 @@ import rectangle from './rectangle/rectangle.png'
 import guitar from './guitar/guitar.png'
 import drum from './drum/drum.png'
 import violin from './violin/violin.png'
-import defaultUser from './defaultUser/defaultUser.png'
 
 // import audio assets for en, it and de
 import apple_en from './apple/apple_en.mp3'
@@ -364,8 +363,7 @@ export const wordImgs = {
   rectangle,
   guitar,
   drum,
-  violin,
-  defaultUser
+  violin
 }
 // export audio assets
 export const wordAudio = {

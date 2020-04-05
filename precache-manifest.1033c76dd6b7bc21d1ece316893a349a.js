@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d3ddca0367c1a66e3cff46b97af8c35e",
+    "revision": "dcf7ee6047e62c45e230660524829fb7",
     "url": "/01_ui/index.html"
   },
   {
-    "revision": "aa3f5206dae0757df517",
+    "revision": "43a50aa6eb9ad6c1fc08",
     "url": "/01_ui/static/css/main.85cea024.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/01_ui/static/js/2.2590e949.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "aa3f5206dae0757df517",
-    "url": "/01_ui/static/js/main.04cbfb07.chunk.js"
+    "revision": "43a50aa6eb9ad6c1fc08",
+    "url": "/01_ui/static/js/main.dd0bcf72.chunk.js"
   },
   {
     "revision": "2913a2113bd175812678",
@@ -322,22 +322,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "8f82ad64a547276b382db0fe098964b7",
     "url": "/01_ui/static/media/_9_it.8f82ad64.mp3"
-  },
-  {
-    "revision": "a8e847be2e412124b16f57389976f68c",
-    "url": "/01_ui/static/media/_great.a8e847be.png"
-  },
-  {
-    "revision": "6ac1c22dee897c212e6d6a925fe076b9",
-    "url": "/01_ui/static/media/_great_de.6ac1c22d.mp3"
-  },
-  {
-    "revision": "f00acc552500d9285c924c35da2acc4f",
-    "url": "/01_ui/static/media/_great_en.f00acc55.mp3"
-  },
-  {
-    "revision": "7823de71dbed6c889c338fb88d858574",
-    "url": "/01_ui/static/media/_great_it.7823de71.mp3"
   },
   {
     "revision": "82027d3f7c7c7d5f7877c10dacc63b0f",
@@ -890,6 +874,22 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "79cdf5ab5ddf95c4e51ecd90ae9c8d92",
     "url": "/01_ui/static/media/horse_it.79cdf5ab.mp3"
+  },
+  {
+    "revision": "a8e847be2e412124b16f57389976f68c",
+    "url": "/01_ui/static/media/id_great.a8e847be.png"
+  },
+  {
+    "revision": "6ac1c22dee897c212e6d6a925fe076b9",
+    "url": "/01_ui/static/media/id_great_de.6ac1c22d.mp3"
+  },
+  {
+    "revision": "f00acc552500d9285c924c35da2acc4f",
+    "url": "/01_ui/static/media/id_great_en.f00acc55.mp3"
+  },
+  {
+    "revision": "7823de71dbed6c889c338fb88d858574",
+    "url": "/01_ui/static/media/id_great_it.7823de71.mp3"
   },
   {
     "revision": "7df5ceddb04499391ff36717e7d339ef",

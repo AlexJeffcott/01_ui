@@ -26,7 +26,7 @@ export const settingsActionDefs = {
   setUserNameToFox: { type: 'setUserName', payload: { userName: 'fox' } },
   setUserNameToDog: { type: 'setUserName', payload: { userName: 'dog' } },
   setUserNameToMonkey: { type: 'setUserName', payload: { userName: 'monkey' } },
-  setCourse001: { type: 'setCourse', payload: { course: '001' } }
+  setCourse: course => ({ type: 'setCourse', payload: { course } })
 }
 
 function settingsReducer (state, action) {

@@ -2,9 +2,10 @@ import React from 'react'
 import { imgs } from './assets'
 import { Link } from 'react-router-dom'
 
-export default function Settings({ states, dispatchers, actionDefs, api }) {
+export default function Settings ({ states, dispatchers, actionDefs, api }) {
   const { settingsDispatcher } = dispatchers
   const { settingsIsOpen, lang, gameType, userName, course } = states.settingsState
+  const { courses } = states.envsDepsMocksState.mocks
   const {
     setSettingsToOpen,
     setSettingsToClosed,
@@ -14,7 +15,7 @@ export default function Settings({ states, dispatchers, actionDefs, api }) {
     setLangToEn,
     setLangToIt,
     setLangToDe,
-    setCourse001,
+    setCourse
   } = actionDefs.settingsActionDefs
 
   const handleToggleSettings = () => settingsDispatcher(settingsIsOpen ? setSettingsToClosed : setSettingsToOpen)
@@ -24,7 +25,9 @@ export default function Settings({ states, dispatchers, actionDefs, api }) {
       {!settingsIsOpen ? (
         <img onClick={handleToggleSettings} className="avatar clickable" src={imgs[userName]} alt="User Avatar" />
       ) : (
-        <div onClick={handleToggleSettings} className="settingsCloseBtn">X</div>
+        <div onClick={handleToggleSettings} className="settingsCloseBtn">
+          X
+        </div>
       )}
       {settingsIsOpen && (
         <React.Fragment>
@@ -58,9 +61,11 @@ export default function Settings({ states, dispatchers, actionDefs, api }) {
             Choose User
           </button>
           <hr />
-          <button className={course === '001' ? 'selectedBtn' : ''} onClick={() => settingsDispatcher(setCourse001)}>
-            Course 1
-          </button>
+          {Object.keys(courses).map((c, i) => (
+            <button key={i} className={course === c ? 'selectedBtn' : ''} onClick={() => settingsDispatcher(setCourse(c))}>
+              Course {c}
+            </button>
+          ))}
           <hr />
           <Link to="/">Home</Link>
           <Link to="/assets">Assets</Link>

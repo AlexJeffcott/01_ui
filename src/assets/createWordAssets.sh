@@ -1,73 +1,76 @@
 #!/bin/sh
-
-################## create mock questions object #################
-#rm -f ../__mocks__/questions.js
-#echo "export const questions = [" > ../__mocks__/questions.js
+IFS="|"
+################### create words object #################
+#rm -f ../__mocks__/words.js
+#echo "export const words = [" > ../__mocks__/words.js
 #while read line; do
-#  read en it de <<< "$( echo "${line}" | awk "{print $1 $2 $3}" )"
+#  read en it de <<< "${line}"
+#  id="${en}"
 #  echo "  {
-#    id: '${en}',
+#    id: '${id}',
 #    text_en: '${en}',
-#    audioId_en: '${en}_en',
+#    audioId_en: '${id}_en',
 #    text_it: '${it}',
-#    audioId_it: '${en}_it',
+#    audioId_it: '${id}_it',
 #    text_de: '${de}',
-#    audioId_de: '${en}_de',
-#    imgId: '${en}'
-#  }," >> ../__mocks__/index.js
-#done < assetList.txt
-#echo "]" >> ../__mocks__/index.js
+#    audioId_de: '${id}_de',
+#    imgId: '${id}'
+#  }," >> ../__mocks__/words.js
+#done < assetsWords.txt
+#echo "]" >> ../__mocks__/words.js
 
 ##############################################################################################################
 ##############################################################################################################
 ##############################################################################################################
 ##############################################################################################################
 ################# create imports and exports for assets ######################################################
-#rm -f index.js
-#echo "// import visual assets" >> index.js
+#rm -f wordAssetsExports.js
+#echo "// import visual assets" >> wordAssetsExports.js
 #while read line; do
-#  read en it de <<< "$( echo "${line}" | awk "{print $1 $2 $3}" )"
-#  echo "import ${en} from \"./${en}/${en}.png\"" >> index.js
-#done < assetList.txt
-#echo "import defaultUser from \"./defaultUser/defaultUser.png\"" >> index.js
+#  read en it de <<< "${line}"
+#  id="${en}"
+#  echo "import ${id} from \"./${id}/${id}.png\"" >> wordAssetsExports.js
+#done < assetsWords.txt
+#echo "import defaultUser from \"./defaultUser/defaultUser.png\"" >> wordAssetsExports.js
 #echo "
-#// import audio assets for en, it and de" >> index.js
+#// import audio assets for en, it and de" >> wordAssetsExports.js
 #while read line; do
-#  read en it de <<< "$( echo "${line}" | awk "{print $1 $2 $3}" )"
-#  echo "import ${en}_en from \"./${en}/${en}_en.mp3\"
-#import ${en}_it from \"./${en}/${en}_it.mp3\"
-#import ${en}_de from \"./${en}/${en}_de.mp3\"" >> index.js
-#done < assetList.txt
+#  read en it de <<< "${line}"
+#  id="${en}"
+#  echo "import ${id}_en from \"./${id}/${id}_en.mp3\"
+#import ${id}_it from \"./${id}/${id}_it.mp3\"
+#import ${id}_de from \"./${id}/${id}_de.mp3\"" >> wordAssetsExports.js
+#done < assetsWords.txt
 #echo "
 #// export visual assets
-#export const imgs = {" >> index.js
+#export const imgs = {" >> wordAssetsExports.js
 #while read line; do
-#  read en it de <<< "$( echo "${line}" | awk "{print $1 $2 $3}" )"
-#  echo "  ${en}," >> index.js
-#done < assetList.txt
-#echo "  defaultUser," >> index.js
+#  read en it de <<< "${line}"
+#  id="${en}"
+#  echo "  ${id}," >> wordAssetsExports.js
+#done < assetsWords.txt
+#echo "  defaultUser," >> wordAssetsExports.js
 #echo "}
 #// export audio assets
-#export const audio = {" >> index.js
+#export const audio = {" >> wordAssetsExports.js
 #while read line; do
-#  read en it de <<< "$( echo "${line}" | awk "{print $1 $2 $3}" )"
-#  echo "  ${en}_en,
-#  ${en}_it,
-#  ${en}_de," >> index.js
-#done < assetList.txt
-#echo "}" >> index.js
+#  read en it de <<< "${line}"
+#  id="${en}"
+#  echo "  ${id}_en,
+#  ${id}_it,
+#  ${id}_de," >> wordAssetsExports.js
+#done < assetsWords.txt
+#echo "}" >> wordAssetsExports.js
 
 ##############################################################################################################
 ##############################################################################################################
 ##############################################################################################################
 ##############################################################################################################
-################## create audio assets #######################################################################
+################## create audio assets for words #############################################################
 #while read line; do
-#  read en it de <<< "$( echo "${line}" | awk "{print $1 $2 $3}" )"
-#  echo "$en"
-#  echo "$it"
-#  echo "$de"
-#  mkdir "${en}"
+#  read en it de <<< "${line}"
+#  id="${en}"
+#  mkdir "${id}"
 
 ################## get UK English audio #################
 #request="{
@@ -85,7 +88,7 @@
 #}"
 #  # shellcheck disable=SC2046
 #  curl -s -X POST -H "Authorization: Bearer $(gcloud auth application-default print-access-token)" -H "Content-Type: application/json; charset=utf-8" --data-binary "${request}" https://texttospeech.googleapis.com/v1/text:synthesize | awk -F'"' '$2=="audioContent"{printf("%s", $4)}' > temp.txt
-#  base64 temp.txt --decode > "${en}/${en}_en.mp3"
+#  base64 temp.txt --decode > "${id}/${id}_en.mp3"
 #  rm -f temp.txt
 #
 ################### get Italian audio #################
@@ -104,7 +107,7 @@
 #}"
 #  # shellcheck disable=SC2046
 #  curl -s -X POST -H "Authorization: Bearer $(gcloud auth application-default print-access-token)" -H "Content-Type: application/json; charset=utf-8" --data-binary "${request}" https://texttospeech.googleapis.com/v1/text:synthesize | awk -F'"' '$2=="audioContent"{printf("%s", $4)}' > temp.txt
-#  base64 temp.txt --decode > "${en}/${en}_it.mp3"
+#  base64 temp.txt --decode > "${id}/${id}_it.mp3"
 #  rm -f temp.txt
 
 ################## get German audio #################
@@ -123,7 +126,7 @@
 #}"
 #  # shellcheck disable=SC2046
 #  curl -s -X POST -H "Authorization: Bearer $(gcloud auth application-default print-access-token)" -H "Content-Type: application/json; charset=utf-8" --data-binary "${request}" https://texttospeech.googleapis.com/v1/text:synthesize | awk -F'"' '$2=="audioContent"{printf("%s", $4)}' > temp.txt
-#  base64 temp.txt --decode > "${en}/${en}_de.mp3"
+#  base64 temp.txt --decode > "${id}/${id}_de.mp3"
 #  rm -f temp.txt
 #
-#done < assetList.txt
+#done < assetsWords.txt

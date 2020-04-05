@@ -1,4 +1,4 @@
-export const questions = [
+export const words = [
   {
     id: 'apple',
     text_en: 'apple',

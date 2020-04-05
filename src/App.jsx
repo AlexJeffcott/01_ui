@@ -16,7 +16,7 @@ const App = ({ states, dispatchers, actionDefs, api }) => {
     setUserNameToCat,
     setUserNameToFox,
     setUserNameToDog,
-    setUserNameToMonkey,
+    setUserNameToMonkey
   } = actionDefs.settingsActionDefs
 
   const [qs, setQs] = React.useState([])
@@ -25,7 +25,6 @@ const App = ({ states, dispatchers, actionDefs, api }) => {
   const [qIndex, setQIndex] = React.useState(0)
   const [selected, setSelected] = React.useState(null)
   const [answered, setAnswered] = React.useState('')
-
   const [scores, setScores] = React.useState({})
 
   React.useEffect(() => {
@@ -77,16 +76,17 @@ const App = ({ states, dispatchers, actionDefs, api }) => {
     } else if (_selected === q.id) {
       const newScores = {
         ...scores,
-        [q.id]: scores[q.id] ? scores[q.id] + 1 : 1,
+        [q.id]: scores[q.id] ? scores[q.id] + 1 : 1
       }
       setScores(newScores)
       localStorage.setItem(userName, JSON.stringify(newScores))
+      handlePlayAudio('_great', () => {}, lang)
       setAnswered('correct')
       setTimeout(goToNextQ, 2000)
     } else {
       const newScores = {
         ...scores,
-        [q.id]: scores[q.id] ? scores[q.id] - 1 : -1,
+        [q.id]: scores[q.id] ? scores[q.id] - 1 : -1
       }
       setScores(newScores)
       setAnswered('incorrect')

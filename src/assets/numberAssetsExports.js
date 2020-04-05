@@ -1,179 +1,179 @@
 // import visual assets
-import _0 from './_0/_0.png'
-import _1 from './_1/_1.png'
-import _2 from './_2/_2.png'
-import _3 from './_3/_3.png'
-import _4 from './_4/_4.png'
-import _5 from './_5/_5.png'
-import _6 from './_6/_6.png'
-import _7 from './_7/_7.png'
-import _8 from './_8/_8.png'
-import _9 from './_9/_9.png'
-import _10 from './_10/_10.png'
-import _11 from './_11/_11.png'
-import _12 from './_12/_12.png'
-// import _13 from './_13/_13.png'
-// import _14 from './_14/_14.png'
-// import _15 from './_15/_15.png'
-// import _16 from './_16/_16.png'
-// import _17 from './_17/_17.png'
-// import _18 from './_18/_18.png'
-// import _19 from './_19/_19.png'
-// import _20 from './_20/_20.png'
+import id_0 from './id_0/id_0.png'
+import id_1 from './id_1/id_1.png'
+import id_2 from './id_2/id_2.png'
+import id_3 from './id_3/id_3.png'
+import id_4 from './id_4/id_4.png'
+import id_5 from './id_5/id_5.png'
+import id_6 from './id_6/id_6.png'
+import id_7 from './id_7/id_7.png'
+import id_8 from './id_8/id_8.png'
+import id_9 from './id_9/id_9.png'
+import id_10 from './id_10/id_10.png'
+import id_11 from './id_11/id_11.png'
+import id_12 from './id_12/id_12.png'
+import id_13 from './id_13/id_13.png'
+import id_14 from './id_14/id_14.png'
+import id_15 from './id_15/id_15.png'
+import id_16 from './id_16/id_16.png'
+import id_17 from './id_17/id_17.png'
+import id_18 from './id_18/id_18.png'
+import id_19 from './id_19/id_19.png'
+import id_20 from './id_20/id_20.png'
 
 // import audio assets for en, it and de
-import _0_en from './_0/_0_en.mp3'
-import _0_it from './_0/_0_it.mp3'
-import _0_de from './_0/_0_de.mp3'
-import _1_en from './_1/_1_en.mp3'
-import _1_it from './_1/_1_it.mp3'
-import _1_de from './_1/_1_de.mp3'
-import _2_en from './_2/_2_en.mp3'
-import _2_it from './_2/_2_it.mp3'
-import _2_de from './_2/_2_de.mp3'
-import _3_en from './_3/_3_en.mp3'
-import _3_it from './_3/_3_it.mp3'
-import _3_de from './_3/_3_de.mp3'
-import _4_en from './_4/_4_en.mp3'
-import _4_it from './_4/_4_it.mp3'
-import _4_de from './_4/_4_de.mp3'
-import _5_en from './_5/_5_en.mp3'
-import _5_it from './_5/_5_it.mp3'
-import _5_de from './_5/_5_de.mp3'
-import _6_en from './_6/_6_en.mp3'
-import _6_it from './_6/_6_it.mp3'
-import _6_de from './_6/_6_de.mp3'
-import _7_en from './_7/_7_en.mp3'
-import _7_it from './_7/_7_it.mp3'
-import _7_de from './_7/_7_de.mp3'
-import _8_en from './_8/_8_en.mp3'
-import _8_it from './_8/_8_it.mp3'
-import _8_de from './_8/_8_de.mp3'
-import _9_en from './_9/_9_en.mp3'
-import _9_it from './_9/_9_it.mp3'
-import _9_de from './_9/_9_de.mp3'
-import _10_en from './_10/_10_en.mp3'
-import _10_it from './_10/_10_it.mp3'
-import _10_de from './_10/_10_de.mp3'
-import _11_en from './_11/_11_en.mp3'
-import _11_it from './_11/_11_it.mp3'
-import _11_de from './_11/_11_de.mp3'
-import _12_en from './_12/_12_en.mp3'
-import _12_it from './_12/_12_it.mp3'
-import _12_de from './_12/_12_de.mp3'
-import _13_en from './_13/_13_en.mp3'
-import _13_it from './_13/_13_it.mp3'
-import _13_de from './_13/_13_de.mp3'
-import _14_en from './_14/_14_en.mp3'
-import _14_it from './_14/_14_it.mp3'
-import _14_de from './_14/_14_de.mp3'
-import _15_en from './_15/_15_en.mp3'
-import _15_it from './_15/_15_it.mp3'
-import _15_de from './_15/_15_de.mp3'
-import _16_en from './_16/_16_en.mp3'
-import _16_it from './_16/_16_it.mp3'
-import _16_de from './_16/_16_de.mp3'
-import _17_en from './_17/_17_en.mp3'
-import _17_it from './_17/_17_it.mp3'
-import _17_de from './_17/_17_de.mp3'
-import _18_en from './_18/_18_en.mp3'
-import _18_it from './_18/_18_it.mp3'
-import _18_de from './_18/_18_de.mp3'
-import _19_en from './_19/_19_en.mp3'
-import _19_it from './_19/_19_it.mp3'
-import _19_de from './_19/_19_de.mp3'
-import _20_en from './_20/_20_en.mp3'
-import _20_it from './_20/_20_it.mp3'
-import _20_de from './_20/_20_de.mp3'
+import id_0_en from './id_0/id_0_en.mp3'
+import id_0_it from './id_0/id_0_it.mp3'
+import id_0_de from './id_0/id_0_de.mp3'
+import id_1_en from './id_1/id_1_en.mp3'
+import id_1_it from './id_1/id_1_it.mp3'
+import id_1_de from './id_1/id_1_de.mp3'
+import id_2_en from './id_2/id_2_en.mp3'
+import id_2_it from './id_2/id_2_it.mp3'
+import id_2_de from './id_2/id_2_de.mp3'
+import id_3_en from './id_3/id_3_en.mp3'
+import id_3_it from './id_3/id_3_it.mp3'
+import id_3_de from './id_3/id_3_de.mp3'
+import id_4_en from './id_4/id_4_en.mp3'
+import id_4_it from './id_4/id_4_it.mp3'
+import id_4_de from './id_4/id_4_de.mp3'
+import id_5_en from './id_5/id_5_en.mp3'
+import id_5_it from './id_5/id_5_it.mp3'
+import id_5_de from './id_5/id_5_de.mp3'
+import id_6_en from './id_6/id_6_en.mp3'
+import id_6_it from './id_6/id_6_it.mp3'
+import id_6_de from './id_6/id_6_de.mp3'
+import id_7_en from './id_7/id_7_en.mp3'
+import id_7_it from './id_7/id_7_it.mp3'
+import id_7_de from './id_7/id_7_de.mp3'
+import id_8_en from './id_8/id_8_en.mp3'
+import id_8_it from './id_8/id_8_it.mp3'
+import id_8_de from './id_8/id_8_de.mp3'
+import id_9_en from './id_9/id_9_en.mp3'
+import id_9_it from './id_9/id_9_it.mp3'
+import id_9_de from './id_9/id_9_de.mp3'
+import id_10_en from './id_10/id_10_en.mp3'
+import id_10_it from './id_10/id_10_it.mp3'
+import id_10_de from './id_10/id_10_de.mp3'
+import id_11_en from './id_11/id_11_en.mp3'
+import id_11_it from './id_11/id_11_it.mp3'
+import id_11_de from './id_11/id_11_de.mp3'
+import id_12_en from './id_12/id_12_en.mp3'
+import id_12_it from './id_12/id_12_it.mp3'
+import id_12_de from './id_12/id_12_de.mp3'
+import id_13_en from './id_13/id_13_en.mp3'
+import id_13_it from './id_13/id_13_it.mp3'
+import id_13_de from './id_13/id_13_de.mp3'
+import id_14_en from './id_14/id_14_en.mp3'
+import id_14_it from './id_14/id_14_it.mp3'
+import id_14_de from './id_14/id_14_de.mp3'
+import id_15_en from './id_15/id_15_en.mp3'
+import id_15_it from './id_15/id_15_it.mp3'
+import id_15_de from './id_15/id_15_de.mp3'
+import id_16_en from './id_16/id_16_en.mp3'
+import id_16_it from './id_16/id_16_it.mp3'
+import id_16_de from './id_16/id_16_de.mp3'
+import id_17_en from './id_17/id_17_en.mp3'
+import id_17_it from './id_17/id_17_it.mp3'
+import id_17_de from './id_17/id_17_de.mp3'
+import id_18_en from './id_18/id_18_en.mp3'
+import id_18_it from './id_18/id_18_it.mp3'
+import id_18_de from './id_18/id_18_de.mp3'
+import id_19_en from './id_19/id_19_en.mp3'
+import id_19_it from './id_19/id_19_it.mp3'
+import id_19_de from './id_19/id_19_de.mp3'
+import id_20_en from './id_20/id_20_en.mp3'
+import id_20_it from './id_20/id_20_it.mp3'
+import id_20_de from './id_20/id_20_de.mp3'
 
 // export visual assets
 export const numberImgs = {
-  _0,
-  _1,
-  _2,
-  _3,
-  _4,
-  _5,
-  _6,
-  _7,
-  _8,
-  _9,
-  _10,
-  _11,
-  _12,
-  // _13,
-  // _14,
-  // _15,
-  // _16,
-  // _17,
-  // _18,
-  // _19,
-  // _20
+  id_0,
+  id_1,
+  id_2,
+  id_3,
+  id_4,
+  id_5,
+  id_6,
+  id_7,
+  id_8,
+  id_9,
+  id_10,
+  id_11,
+  id_12,
+  id_13,
+  id_14,
+  id_15,
+  id_16,
+  id_17,
+  id_18,
+  id_19,
+  id_20
 }
 
 // export audio assets
 export const numberAudio = {
-  _0_en,
-  _0_it,
-  _0_de,
-  _1_en,
-  _1_it,
-  _1_de,
-  _2_en,
-  _2_it,
-  _2_de,
-  _3_en,
-  _3_it,
-  _3_de,
-  _4_en,
-  _4_it,
-  _4_de,
-  _5_en,
-  _5_it,
-  _5_de,
-  _6_en,
-  _6_it,
-  _6_de,
-  _7_en,
-  _7_it,
-  _7_de,
-  _8_en,
-  _8_it,
-  _8_de,
-  _9_en,
-  _9_it,
-  _9_de,
-  _10_en,
-  _10_it,
-  _10_de,
-  _11_en,
-  _11_it,
-  _11_de,
-  _12_en,
-  _12_it,
-  _12_de,
-  _13_en,
-  _13_it,
-  _13_de,
-  _14_en,
-  _14_it,
-  _14_de,
-  _15_en,
-  _15_it,
-  _15_de,
-  _16_en,
-  _16_it,
-  _16_de,
-  _17_en,
-  _17_it,
-  _17_de,
-  _18_en,
-  _18_it,
-  _18_de,
-  _19_en,
-  _19_it,
-  _19_de,
-  _20_en,
-  _20_it,
-  _20_de
+  id_0_en,
+  id_0_it,
+  id_0_de,
+  id_1_en,
+  id_1_it,
+  id_1_de,
+  id_2_en,
+  id_2_it,
+  id_2_de,
+  id_3_en,
+  id_3_it,
+  id_3_de,
+  id_4_en,
+  id_4_it,
+  id_4_de,
+  id_5_en,
+  id_5_it,
+  id_5_de,
+  id_6_en,
+  id_6_it,
+  id_6_de,
+  id_7_en,
+  id_7_it,
+  id_7_de,
+  id_8_en,
+  id_8_it,
+  id_8_de,
+  id_9_en,
+  id_9_it,
+  id_9_de,
+  id_10_en,
+  id_10_it,
+  id_10_de,
+  id_11_en,
+  id_11_it,
+  id_11_de,
+  id_12_en,
+  id_12_it,
+  id_12_de,
+  id_13_en,
+  id_13_it,
+  id_13_de,
+  id_14_en,
+  id_14_it,
+  id_14_de,
+  id_15_en,
+  id_15_it,
+  id_15_de,
+  id_16_en,
+  id_16_it,
+  id_16_de,
+  id_17_en,
+  id_17_it,
+  id_17_de,
+  id_18_en,
+  id_18_it,
+  id_18_de,
+  id_19_en,
+  id_19_it,
+  id_19_de,
+  id_20_en,
+  id_20_it,
+  id_20_de
 }

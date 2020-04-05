@@ -4,7 +4,7 @@
 #rm -f ../__mocks__/numbers.js
 #echo "export const numbers = [" > ../__mocks__/numbers.js
 #while read number; do
-#  id="_${number}"
+#  id="id_${number}"
 #  echo "  {
 #    id: '${id}',
 #    text_en: '${number}',
@@ -26,14 +26,14 @@
 #rm -f numberAssetsExports.js
 #echo "// import visual assets" >> numberAssetsExports.js
 #while read number; do
-#  id="_${number}"
+#  id="id_${number}"
 #  echo "import ${id} from \"./${id}/${id}.png\"" >> numberAssetsExports.js
 #done < assetsNumbers.txt
 #
 #echo "
 #// import audio assets for en, it and de" >> numberAssetsExports.js
 #while read number; do
-#  id="_${number}"
+#  id="id_${number}"
 #  echo "import ${id}_en from \"./${id}/${id}_en.mp3\"
 #import ${id}_it from \"./${id}/${id}_it.mp3\"
 #import ${id}_de from \"./${id}/${id}_de.mp3\"" >> numberAssetsExports.js
@@ -43,7 +43,7 @@
 #// export visual assets
 #export const numberImgs = {" >> numberAssetsExports.js
 #while read number; do
-#  id="_${number}"
+#  id="id_${number}"
 #  echo "  ${id}," >> numberAssetsExports.js
 #done < assetsNumbers.txt
 #
@@ -52,7 +52,7 @@
 #// export audio assets
 #export const numberAudio = {" >> numberAssetsExports.js
 #while read number; do
-#  id="_${number}"
+#  id="id_${number}"
 #  echo "  ${id}_en,
 #  ${id}_it,
 #  ${id}_de," >> numberAssetsExports.js
@@ -66,8 +66,8 @@
 ##############################################################################################################
 ##############################################################################################################
 ################## create audio assets for words #############################################################
-while read number; do
-  id="_${number}"
+#while read number; do
+#  id="id_${number}"
 #  mkdir "${id}"
 
 ################# get UK English audio #################
@@ -109,22 +109,22 @@ while read number; do
 #  rm -f temp.txt
 
 ################## get German audio #################
-request="{
-  'input':{
-    'text':'${number}'
-  },
-  'voice':{
-    'languageCode':'de-DE',
-    'name':'de-DE-Wavenet-C',
-    'ssmlGender':'FEMALE'
-  },
-  'audioConfig':{
-    'audioEncoding':'MP3'
-  }
-}"
-  # shellcheck disable=SC2046
-  curl -s -X POST -H "Authorization: Bearer $(gcloud auth application-default print-access-token)" -H "Content-Type: application/json; charset=utf-8" --data-binary "${request}" https://texttospeech.googleapis.com/v1/text:synthesize | awk -F'"' '$2=="audioContent"{printf("%s", $4)}' > temp.txt
-  base64 temp.txt --decode > "${id}/${id}_de.mp3"
-  rm -f temp.txt
+#request="{
+#  'input':{
+#    'text':'${number}'
+#  },
+#  'voice':{
+#    'languageCode':'de-DE',
+#    'name':'de-DE-Wavenet-C',
+#    'ssmlGender':'FEMALE'
+#  },
+#  'audioConfig':{
+#    'audioEncoding':'MP3'
+#  }
+#}"
+#  # shellcheck disable=SC2046
+#  curl -s -X POST -H "Authorization: Bearer $(gcloud auth application-default print-access-token)" -H "Content-Type: application/json; charset=utf-8" --data-binary "${request}" https://texttospeech.googleapis.com/v1/text:synthesize | awk -F'"' '$2=="audioContent"{printf("%s", $4)}' > temp.txt
+#  base64 temp.txt --decode > "${id}/${id}_de.mp3"
+#  rm -f temp.txt
 
-done < assetsNumbers.txt
+#done < assetsNumbers.txt

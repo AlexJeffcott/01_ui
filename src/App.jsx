@@ -80,7 +80,7 @@ const App = ({ states, dispatchers, actionDefs, api }) => {
       }
       setScores(newScores)
       localStorage.setItem(userName, JSON.stringify(newScores))
-      handlePlayAudio('_great', () => {}, lang)
+      handlePlayAudio('id_great', () => {}, lang)
       setAnswered('correct')
       setTimeout(goToNextQ, 2000)
     } else {

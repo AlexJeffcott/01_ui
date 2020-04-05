@@ -12,14 +12,14 @@ import id_9 from './id_9/id_9.png'
 import id_10 from './id_10/id_10.png'
 import id_11 from './id_11/id_11.png'
 import id_12 from './id_12/id_12.png'
-import id_13 from './id_13/id_13.png'
-import id_14 from './id_14/id_14.png'
-import id_15 from './id_15/id_15.png'
-import id_16 from './id_16/id_16.png'
-import id_17 from './id_17/id_17.png'
-import id_18 from './id_18/id_18.png'
-import id_19 from './id_19/id_19.png'
-import id_20 from './id_20/id_20.png'
+// import id_13 from './id_13/id_13.png'
+// import id_14 from './id_14/id_14.png'
+// import id_15 from './id_15/id_15.png'
+// import id_16 from './id_16/id_16.png'
+// import id_17 from './id_17/id_17.png'
+// import id_18 from './id_18/id_18.png'
+// import id_19 from './id_19/id_19.png'
+// import id_20 from './id_20/id_20.png'
 
 // import audio assets for en, it and de
 import id_0_en from './id_0/id_0_en.mp3'
@@ -101,14 +101,14 @@ export const numberImgs = {
   id_10,
   id_11,
   id_12,
-  id_13,
-  id_14,
-  id_15,
-  id_16,
-  id_17,
-  id_18,
-  id_19,
-  id_20
+  // id_13,
+  // id_14,
+  // id_15,
+  // id_16,
+  // id_17,
+  // id_18,
+  // id_19,
+  // id_20
 }
 
 // export audio assets

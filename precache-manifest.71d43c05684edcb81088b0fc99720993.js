@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9619016baff93281ab769f19ad6ea274",
+    "revision": "ceda404d5fb74d89937397cc2498631e",
     "url": "/01_ui/index.html"
   },
   {
-    "revision": "fc7798fe51dfd77a8541",
+    "revision": "01c48f5c5224c61b08be",
     "url": "/01_ui/static/css/main.85cea024.chunk.css"
   },
   {
@@ -16,312 +16,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/01_ui/static/js/2.2590e949.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "fc7798fe51dfd77a8541",
-    "url": "/01_ui/static/js/main.a397f901.chunk.js"
+    "revision": "01c48f5c5224c61b08be",
+    "url": "/01_ui/static/js/main.f94c3d36.chunk.js"
   },
   {
     "revision": "2913a2113bd175812678",
     "url": "/01_ui/static/js/runtime-main.afa7dcb8.js"
-  },
-  {
-    "revision": "3021cf4c4a87580754ade0306658bde8",
-    "url": "/01_ui/static/media/_0.3021cf4c.png"
-  },
-  {
-    "revision": "f4be88de16e3a22b45dfb1c9710dc0a9",
-    "url": "/01_ui/static/media/_0_de.f4be88de.mp3"
-  },
-  {
-    "revision": "6cafe5cfd85aa6d48776225774813a1d",
-    "url": "/01_ui/static/media/_0_en.6cafe5cf.mp3"
-  },
-  {
-    "revision": "ac34ca38f134ae953e4ed0aa54e92474",
-    "url": "/01_ui/static/media/_0_it.ac34ca38.mp3"
-  },
-  {
-    "revision": "bb13a9ef93001ed37f8fe7a39f37845b",
-    "url": "/01_ui/static/media/_10.bb13a9ef.png"
-  },
-  {
-    "revision": "80e0048b6f66ab368802e03f45bf7110",
-    "url": "/01_ui/static/media/_10_de.80e0048b.mp3"
-  },
-  {
-    "revision": "131da07ee6e9a42b97411896f74b4ab5",
-    "url": "/01_ui/static/media/_10_en.131da07e.mp3"
-  },
-  {
-    "revision": "e69bb802f9ebac8ff42e98fd2b2a5f26",
-    "url": "/01_ui/static/media/_10_it.e69bb802.mp3"
-  },
-  {
-    "revision": "38432adfeac5c778248de88d510eac98",
-    "url": "/01_ui/static/media/_11.38432adf.png"
-  },
-  {
-    "revision": "ffc7301a30e03b5328fc715678144eab",
-    "url": "/01_ui/static/media/_11_de.ffc7301a.mp3"
-  },
-  {
-    "revision": "3dbcdf237d248571980d622cb56dbed4",
-    "url": "/01_ui/static/media/_11_en.3dbcdf23.mp3"
-  },
-  {
-    "revision": "104b848b8243e9b27bb08cc1d5171dbc",
-    "url": "/01_ui/static/media/_11_it.104b848b.mp3"
-  },
-  {
-    "revision": "2e2f038e95619c07176b9cb4fac6f8ba",
-    "url": "/01_ui/static/media/_12.2e2f038e.png"
-  },
-  {
-    "revision": "9ee712877c8198cc13d33fbacc2b14ed",
-    "url": "/01_ui/static/media/_12_de.9ee71287.mp3"
-  },
-  {
-    "revision": "c89551537a7c2ee94881a560c25dea46",
-    "url": "/01_ui/static/media/_12_en.c8955153.mp3"
-  },
-  {
-    "revision": "1918b535cbfb4097097f16ec7cba2489",
-    "url": "/01_ui/static/media/_12_it.1918b535.mp3"
-  },
-  {
-    "revision": "ce158e9da626ec084972c496fdd2b3a5",
-    "url": "/01_ui/static/media/_13_de.ce158e9d.mp3"
-  },
-  {
-    "revision": "04b25add23c2dab7896f205970818d3b",
-    "url": "/01_ui/static/media/_13_en.04b25add.mp3"
-  },
-  {
-    "revision": "9093c8b1209149226bc60265797174f9",
-    "url": "/01_ui/static/media/_13_it.9093c8b1.mp3"
-  },
-  {
-    "revision": "c820b0dd2589bd29a889d06c46f29208",
-    "url": "/01_ui/static/media/_14_de.c820b0dd.mp3"
-  },
-  {
-    "revision": "b5354838be1b4c65a16321182b831fc9",
-    "url": "/01_ui/static/media/_14_en.b5354838.mp3"
-  },
-  {
-    "revision": "348834230d33dce92ea71b75c173d242",
-    "url": "/01_ui/static/media/_14_it.34883423.mp3"
-  },
-  {
-    "revision": "743613c9db053b6953f418bce0c67b8b",
-    "url": "/01_ui/static/media/_15_de.743613c9.mp3"
-  },
-  {
-    "revision": "b43e0e7ae579b954528de956d86d9462",
-    "url": "/01_ui/static/media/_15_en.b43e0e7a.mp3"
-  },
-  {
-    "revision": "7f8fc09c15f46db44281e7ae314efeeb",
-    "url": "/01_ui/static/media/_15_it.7f8fc09c.mp3"
-  },
-  {
-    "revision": "cd0630205e9ece3780616e8114828d45",
-    "url": "/01_ui/static/media/_16_de.cd063020.mp3"
-  },
-  {
-    "revision": "039c3e7dfc567b99eb0230bf805fcb56",
-    "url": "/01_ui/static/media/_16_en.039c3e7d.mp3"
-  },
-  {
-    "revision": "91437b83aa1942e5d0ba9f857d35e999",
-    "url": "/01_ui/static/media/_16_it.91437b83.mp3"
-  },
-  {
-    "revision": "8b1ef1eda5eca0c405a2479de9a6ca2b",
-    "url": "/01_ui/static/media/_17_de.8b1ef1ed.mp3"
-  },
-  {
-    "revision": "64c88769ce67342e8b7307ce6b412b6c",
-    "url": "/01_ui/static/media/_17_en.64c88769.mp3"
-  },
-  {
-    "revision": "7c9ee9fd135ae02030ca75a61af7cf48",
-    "url": "/01_ui/static/media/_17_it.7c9ee9fd.mp3"
-  },
-  {
-    "revision": "6011756a7ee56c7549e011763c657d0b",
-    "url": "/01_ui/static/media/_18_de.6011756a.mp3"
-  },
-  {
-    "revision": "1c91c4957f6a41baf78bd1eb750de6f8",
-    "url": "/01_ui/static/media/_18_en.1c91c495.mp3"
-  },
-  {
-    "revision": "983c9fae72d79608c9822e136cc8429d",
-    "url": "/01_ui/static/media/_18_it.983c9fae.mp3"
-  },
-  {
-    "revision": "667953ec2d050f6c43d47914a1532268",
-    "url": "/01_ui/static/media/_19_de.667953ec.mp3"
-  },
-  {
-    "revision": "0ee867a4e7ffe5b5c24b22b6b21929e8",
-    "url": "/01_ui/static/media/_19_en.0ee867a4.mp3"
-  },
-  {
-    "revision": "c5f6ce75b38dd2d727277cc6e2d5aaf3",
-    "url": "/01_ui/static/media/_19_it.c5f6ce75.mp3"
-  },
-  {
-    "revision": "0422804b3e84adf32fa015102097984c",
-    "url": "/01_ui/static/media/_1_de.0422804b.mp3"
-  },
-  {
-    "revision": "1695fe5831186e2d0bf0201986601bf3",
-    "url": "/01_ui/static/media/_1_en.1695fe58.mp3"
-  },
-  {
-    "revision": "086b43339a400176aa605ec18ae82758",
-    "url": "/01_ui/static/media/_1_it.086b4333.mp3"
-  },
-  {
-    "revision": "67559c00ce8c14c1909716e88f0d9ac4",
-    "url": "/01_ui/static/media/_2.67559c00.png"
-  },
-  {
-    "revision": "1158076c2000e2afe2de4c9a14d9b944",
-    "url": "/01_ui/static/media/_20_de.1158076c.mp3"
-  },
-  {
-    "revision": "6111939a19b32eda577cfab1022d5e45",
-    "url": "/01_ui/static/media/_20_en.6111939a.mp3"
-  },
-  {
-    "revision": "ffe85207ae9b7871a7e3383f525bd273",
-    "url": "/01_ui/static/media/_20_it.ffe85207.mp3"
-  },
-  {
-    "revision": "a95da07a7f40080587282a31ec955a27",
-    "url": "/01_ui/static/media/_2_de.a95da07a.mp3"
-  },
-  {
-    "revision": "687ca3a8e376e3dea02c32499bb163e5",
-    "url": "/01_ui/static/media/_2_en.687ca3a8.mp3"
-  },
-  {
-    "revision": "f5e504184994422279dcdc78c4ed0d41",
-    "url": "/01_ui/static/media/_2_it.f5e50418.mp3"
-  },
-  {
-    "revision": "e1be42358bcc86749c0404131d4754ef",
-    "url": "/01_ui/static/media/_3.e1be4235.png"
-  },
-  {
-    "revision": "96d88f7f6abf0d60e4326e8216a9bec9",
-    "url": "/01_ui/static/media/_3_de.96d88f7f.mp3"
-  },
-  {
-    "revision": "92b068ae7b7a892e74828dffd8b18a17",
-    "url": "/01_ui/static/media/_3_en.92b068ae.mp3"
-  },
-  {
-    "revision": "029d45222b9a3bf1a7fa45074b87cac8",
-    "url": "/01_ui/static/media/_3_it.029d4522.mp3"
-  },
-  {
-    "revision": "39972e10c86ddeb14b2d2b6a8af43961",
-    "url": "/01_ui/static/media/_4.39972e10.png"
-  },
-  {
-    "revision": "ef9cab13f39216825e9916d8659f032e",
-    "url": "/01_ui/static/media/_4_de.ef9cab13.mp3"
-  },
-  {
-    "revision": "4fab3d735c8eb4eb71c5a3f561a2e962",
-    "url": "/01_ui/static/media/_4_en.4fab3d73.mp3"
-  },
-  {
-    "revision": "e0609c219378a27607475a9f34281aaa",
-    "url": "/01_ui/static/media/_4_it.e0609c21.mp3"
-  },
-  {
-    "revision": "b49e1031de38e563c1147a793fb27ce1",
-    "url": "/01_ui/static/media/_5.b49e1031.png"
-  },
-  {
-    "revision": "8a6da759b64d20cd1da5ca47077ea8bc",
-    "url": "/01_ui/static/media/_5_de.8a6da759.mp3"
-  },
-  {
-    "revision": "0658eba81837c5269aeb0a8721a5ec24",
-    "url": "/01_ui/static/media/_5_en.0658eba8.mp3"
-  },
-  {
-    "revision": "7ac76e7034b9791d02752c526435c1fa",
-    "url": "/01_ui/static/media/_5_it.7ac76e70.mp3"
-  },
-  {
-    "revision": "c7dd8ea7f4f3699c0169e286dc23613a",
-    "url": "/01_ui/static/media/_6.c7dd8ea7.png"
-  },
-  {
-    "revision": "443ac23e840124603660a5f96ea0f0f3",
-    "url": "/01_ui/static/media/_6_de.443ac23e.mp3"
-  },
-  {
-    "revision": "8e488ba721eeb328e6b1f6edd6c608b3",
-    "url": "/01_ui/static/media/_6_en.8e488ba7.mp3"
-  },
-  {
-    "revision": "674a29771b8ebd9f2620dd335660c651",
-    "url": "/01_ui/static/media/_6_it.674a2977.mp3"
-  },
-  {
-    "revision": "0633ae41f02a3c684ff08240ef5bb6c9",
-    "url": "/01_ui/static/media/_7.0633ae41.png"
-  },
-  {
-    "revision": "c6ddad5934dd7130a8c49a12dedcbcff",
-    "url": "/01_ui/static/media/_7_de.c6ddad59.mp3"
-  },
-  {
-    "revision": "f1ab33de7a0ceae6117791355ab6f006",
-    "url": "/01_ui/static/media/_7_en.f1ab33de.mp3"
-  },
-  {
-    "revision": "00e5ddfb4e2f6e3951c81e8e24af9497",
-    "url": "/01_ui/static/media/_7_it.00e5ddfb.mp3"
-  },
-  {
-    "revision": "ea73b4dc63c57818b4522534ce6c8b2f",
-    "url": "/01_ui/static/media/_8.ea73b4dc.png"
-  },
-  {
-    "revision": "a9f79d9d8fde075a0c6f9865588a88b2",
-    "url": "/01_ui/static/media/_8_de.a9f79d9d.mp3"
-  },
-  {
-    "revision": "be7886b0e1830c0a31e83235f2404169",
-    "url": "/01_ui/static/media/_8_en.be7886b0.mp3"
-  },
-  {
-    "revision": "4ecc43d8396814486b4929a4f1eb5195",
-    "url": "/01_ui/static/media/_8_it.4ecc43d8.mp3"
-  },
-  {
-    "revision": "760ccba8ed5e0fbaa28c2b80ac5987c8",
-    "url": "/01_ui/static/media/_9.760ccba8.png"
-  },
-  {
-    "revision": "c69a0cf936dd4caad2dc7a32c6424036",
-    "url": "/01_ui/static/media/_9_de.c69a0cf9.mp3"
-  },
-  {
-    "revision": "7394f2c7292b30482b262f1f1cae687f",
-    "url": "/01_ui/static/media/_9_en.7394f2c7.mp3"
-  },
-  {
-    "revision": "8f82ad64a547276b382db0fe098964b7",
-    "url": "/01_ui/static/media/_9_it.8f82ad64.mp3"
   },
   {
     "revision": "82027d3f7c7c7d5f7877c10dacc63b0f",
@@ -876,6 +576,306 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/01_ui/static/media/horse_it.79cdf5ab.mp3"
   },
   {
+    "revision": "3021cf4c4a87580754ade0306658bde8",
+    "url": "/01_ui/static/media/id_0.3021cf4c.png"
+  },
+  {
+    "revision": "f4be88de16e3a22b45dfb1c9710dc0a9",
+    "url": "/01_ui/static/media/id_0_de.f4be88de.mp3"
+  },
+  {
+    "revision": "6cafe5cfd85aa6d48776225774813a1d",
+    "url": "/01_ui/static/media/id_0_en.6cafe5cf.mp3"
+  },
+  {
+    "revision": "ac34ca38f134ae953e4ed0aa54e92474",
+    "url": "/01_ui/static/media/id_0_it.ac34ca38.mp3"
+  },
+  {
+    "revision": "bb13a9ef93001ed37f8fe7a39f37845b",
+    "url": "/01_ui/static/media/id_10.bb13a9ef.png"
+  },
+  {
+    "revision": "80e0048b6f66ab368802e03f45bf7110",
+    "url": "/01_ui/static/media/id_10_de.80e0048b.mp3"
+  },
+  {
+    "revision": "131da07ee6e9a42b97411896f74b4ab5",
+    "url": "/01_ui/static/media/id_10_en.131da07e.mp3"
+  },
+  {
+    "revision": "e69bb802f9ebac8ff42e98fd2b2a5f26",
+    "url": "/01_ui/static/media/id_10_it.e69bb802.mp3"
+  },
+  {
+    "revision": "38432adfeac5c778248de88d510eac98",
+    "url": "/01_ui/static/media/id_11.38432adf.png"
+  },
+  {
+    "revision": "ffc7301a30e03b5328fc715678144eab",
+    "url": "/01_ui/static/media/id_11_de.ffc7301a.mp3"
+  },
+  {
+    "revision": "3dbcdf237d248571980d622cb56dbed4",
+    "url": "/01_ui/static/media/id_11_en.3dbcdf23.mp3"
+  },
+  {
+    "revision": "104b848b8243e9b27bb08cc1d5171dbc",
+    "url": "/01_ui/static/media/id_11_it.104b848b.mp3"
+  },
+  {
+    "revision": "2e2f038e95619c07176b9cb4fac6f8ba",
+    "url": "/01_ui/static/media/id_12.2e2f038e.png"
+  },
+  {
+    "revision": "9ee712877c8198cc13d33fbacc2b14ed",
+    "url": "/01_ui/static/media/id_12_de.9ee71287.mp3"
+  },
+  {
+    "revision": "c89551537a7c2ee94881a560c25dea46",
+    "url": "/01_ui/static/media/id_12_en.c8955153.mp3"
+  },
+  {
+    "revision": "1918b535cbfb4097097f16ec7cba2489",
+    "url": "/01_ui/static/media/id_12_it.1918b535.mp3"
+  },
+  {
+    "revision": "ce158e9da626ec084972c496fdd2b3a5",
+    "url": "/01_ui/static/media/id_13_de.ce158e9d.mp3"
+  },
+  {
+    "revision": "04b25add23c2dab7896f205970818d3b",
+    "url": "/01_ui/static/media/id_13_en.04b25add.mp3"
+  },
+  {
+    "revision": "9093c8b1209149226bc60265797174f9",
+    "url": "/01_ui/static/media/id_13_it.9093c8b1.mp3"
+  },
+  {
+    "revision": "c820b0dd2589bd29a889d06c46f29208",
+    "url": "/01_ui/static/media/id_14_de.c820b0dd.mp3"
+  },
+  {
+    "revision": "b5354838be1b4c65a16321182b831fc9",
+    "url": "/01_ui/static/media/id_14_en.b5354838.mp3"
+  },
+  {
+    "revision": "348834230d33dce92ea71b75c173d242",
+    "url": "/01_ui/static/media/id_14_it.34883423.mp3"
+  },
+  {
+    "revision": "743613c9db053b6953f418bce0c67b8b",
+    "url": "/01_ui/static/media/id_15_de.743613c9.mp3"
+  },
+  {
+    "revision": "b43e0e7ae579b954528de956d86d9462",
+    "url": "/01_ui/static/media/id_15_en.b43e0e7a.mp3"
+  },
+  {
+    "revision": "7f8fc09c15f46db44281e7ae314efeeb",
+    "url": "/01_ui/static/media/id_15_it.7f8fc09c.mp3"
+  },
+  {
+    "revision": "cd0630205e9ece3780616e8114828d45",
+    "url": "/01_ui/static/media/id_16_de.cd063020.mp3"
+  },
+  {
+    "revision": "039c3e7dfc567b99eb0230bf805fcb56",
+    "url": "/01_ui/static/media/id_16_en.039c3e7d.mp3"
+  },
+  {
+    "revision": "91437b83aa1942e5d0ba9f857d35e999",
+    "url": "/01_ui/static/media/id_16_it.91437b83.mp3"
+  },
+  {
+    "revision": "8b1ef1eda5eca0c405a2479de9a6ca2b",
+    "url": "/01_ui/static/media/id_17_de.8b1ef1ed.mp3"
+  },
+  {
+    "revision": "64c88769ce67342e8b7307ce6b412b6c",
+    "url": "/01_ui/static/media/id_17_en.64c88769.mp3"
+  },
+  {
+    "revision": "7c9ee9fd135ae02030ca75a61af7cf48",
+    "url": "/01_ui/static/media/id_17_it.7c9ee9fd.mp3"
+  },
+  {
+    "revision": "6011756a7ee56c7549e011763c657d0b",
+    "url": "/01_ui/static/media/id_18_de.6011756a.mp3"
+  },
+  {
+    "revision": "1c91c4957f6a41baf78bd1eb750de6f8",
+    "url": "/01_ui/static/media/id_18_en.1c91c495.mp3"
+  },
+  {
+    "revision": "983c9fae72d79608c9822e136cc8429d",
+    "url": "/01_ui/static/media/id_18_it.983c9fae.mp3"
+  },
+  {
+    "revision": "667953ec2d050f6c43d47914a1532268",
+    "url": "/01_ui/static/media/id_19_de.667953ec.mp3"
+  },
+  {
+    "revision": "0ee867a4e7ffe5b5c24b22b6b21929e8",
+    "url": "/01_ui/static/media/id_19_en.0ee867a4.mp3"
+  },
+  {
+    "revision": "c5f6ce75b38dd2d727277cc6e2d5aaf3",
+    "url": "/01_ui/static/media/id_19_it.c5f6ce75.mp3"
+  },
+  {
+    "revision": "0422804b3e84adf32fa015102097984c",
+    "url": "/01_ui/static/media/id_1_de.0422804b.mp3"
+  },
+  {
+    "revision": "1695fe5831186e2d0bf0201986601bf3",
+    "url": "/01_ui/static/media/id_1_en.1695fe58.mp3"
+  },
+  {
+    "revision": "086b43339a400176aa605ec18ae82758",
+    "url": "/01_ui/static/media/id_1_it.086b4333.mp3"
+  },
+  {
+    "revision": "67559c00ce8c14c1909716e88f0d9ac4",
+    "url": "/01_ui/static/media/id_2.67559c00.png"
+  },
+  {
+    "revision": "1158076c2000e2afe2de4c9a14d9b944",
+    "url": "/01_ui/static/media/id_20_de.1158076c.mp3"
+  },
+  {
+    "revision": "6111939a19b32eda577cfab1022d5e45",
+    "url": "/01_ui/static/media/id_20_en.6111939a.mp3"
+  },
+  {
+    "revision": "ffe85207ae9b7871a7e3383f525bd273",
+    "url": "/01_ui/static/media/id_20_it.ffe85207.mp3"
+  },
+  {
+    "revision": "a95da07a7f40080587282a31ec955a27",
+    "url": "/01_ui/static/media/id_2_de.a95da07a.mp3"
+  },
+  {
+    "revision": "687ca3a8e376e3dea02c32499bb163e5",
+    "url": "/01_ui/static/media/id_2_en.687ca3a8.mp3"
+  },
+  {
+    "revision": "f5e504184994422279dcdc78c4ed0d41",
+    "url": "/01_ui/static/media/id_2_it.f5e50418.mp3"
+  },
+  {
+    "revision": "e1be42358bcc86749c0404131d4754ef",
+    "url": "/01_ui/static/media/id_3.e1be4235.png"
+  },
+  {
+    "revision": "96d88f7f6abf0d60e4326e8216a9bec9",
+    "url": "/01_ui/static/media/id_3_de.96d88f7f.mp3"
+  },
+  {
+    "revision": "92b068ae7b7a892e74828dffd8b18a17",
+    "url": "/01_ui/static/media/id_3_en.92b068ae.mp3"
+  },
+  {
+    "revision": "029d45222b9a3bf1a7fa45074b87cac8",
+    "url": "/01_ui/static/media/id_3_it.029d4522.mp3"
+  },
+  {
+    "revision": "39972e10c86ddeb14b2d2b6a8af43961",
+    "url": "/01_ui/static/media/id_4.39972e10.png"
+  },
+  {
+    "revision": "ef9cab13f39216825e9916d8659f032e",
+    "url": "/01_ui/static/media/id_4_de.ef9cab13.mp3"
+  },
+  {
+    "revision": "4fab3d735c8eb4eb71c5a3f561a2e962",
+    "url": "/01_ui/static/media/id_4_en.4fab3d73.mp3"
+  },
+  {
+    "revision": "e0609c219378a27607475a9f34281aaa",
+    "url": "/01_ui/static/media/id_4_it.e0609c21.mp3"
+  },
+  {
+    "revision": "b49e1031de38e563c1147a793fb27ce1",
+    "url": "/01_ui/static/media/id_5.b49e1031.png"
+  },
+  {
+    "revision": "8a6da759b64d20cd1da5ca47077ea8bc",
+    "url": "/01_ui/static/media/id_5_de.8a6da759.mp3"
+  },
+  {
+    "revision": "0658eba81837c5269aeb0a8721a5ec24",
+    "url": "/01_ui/static/media/id_5_en.0658eba8.mp3"
+  },
+  {
+    "revision": "7ac76e7034b9791d02752c526435c1fa",
+    "url": "/01_ui/static/media/id_5_it.7ac76e70.mp3"
+  },
+  {
+    "revision": "c7dd8ea7f4f3699c0169e286dc23613a",
+    "url": "/01_ui/static/media/id_6.c7dd8ea7.png"
+  },
+  {
+    "revision": "443ac23e840124603660a5f96ea0f0f3",
+    "url": "/01_ui/static/media/id_6_de.443ac23e.mp3"
+  },
+  {
+    "revision": "8e488ba721eeb328e6b1f6edd6c608b3",
+    "url": "/01_ui/static/media/id_6_en.8e488ba7.mp3"
+  },
+  {
+    "revision": "674a29771b8ebd9f2620dd335660c651",
+    "url": "/01_ui/static/media/id_6_it.674a2977.mp3"
+  },
+  {
+    "revision": "0633ae41f02a3c684ff08240ef5bb6c9",
+    "url": "/01_ui/static/media/id_7.0633ae41.png"
+  },
+  {
+    "revision": "c6ddad5934dd7130a8c49a12dedcbcff",
+    "url": "/01_ui/static/media/id_7_de.c6ddad59.mp3"
+  },
+  {
+    "revision": "f1ab33de7a0ceae6117791355ab6f006",
+    "url": "/01_ui/static/media/id_7_en.f1ab33de.mp3"
+  },
+  {
+    "revision": "00e5ddfb4e2f6e3951c81e8e24af9497",
+    "url": "/01_ui/static/media/id_7_it.00e5ddfb.mp3"
+  },
+  {
+    "revision": "ea73b4dc63c57818b4522534ce6c8b2f",
+    "url": "/01_ui/static/media/id_8.ea73b4dc.png"
+  },
+  {
+    "revision": "a9f79d9d8fde075a0c6f9865588a88b2",
+    "url": "/01_ui/static/media/id_8_de.a9f79d9d.mp3"
+  },
+  {
+    "revision": "be7886b0e1830c0a31e83235f2404169",
+    "url": "/01_ui/static/media/id_8_en.be7886b0.mp3"
+  },
+  {
+    "revision": "4ecc43d8396814486b4929a4f1eb5195",
+    "url": "/01_ui/static/media/id_8_it.4ecc43d8.mp3"
+  },
+  {
+    "revision": "760ccba8ed5e0fbaa28c2b80ac5987c8",
+    "url": "/01_ui/static/media/id_9.760ccba8.png"
+  },
+  {
+    "revision": "c69a0cf936dd4caad2dc7a32c6424036",
+    "url": "/01_ui/static/media/id_9_de.c69a0cf9.mp3"
+  },
+  {
+    "revision": "7394f2c7292b30482b262f1f1cae687f",
+    "url": "/01_ui/static/media/id_9_en.7394f2c7.mp3"
+  },
+  {
+    "revision": "8f82ad64a547276b382db0fe098964b7",
+    "url": "/01_ui/static/media/id_9_it.8f82ad64.mp3"
+  },
+  {
     "revision": "a8e847be2e412124b16f57389976f68c",
     "url": "/01_ui/static/media/id_great.a8e847be.png"
   },
@@ -884,8 +884,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/01_ui/static/media/id_great_de.6ac1c22d.mp3"
   },
   {
-    "revision": "f00acc552500d9285c924c35da2acc4f",
-    "url": "/01_ui/static/media/id_great_en.f00acc55.mp3"
+    "revision": "d41d8cd98f00b204e9800998ecf8427e",
+    "url": "/01_ui/static/media/id_great_en.d41d8cd9.mp3"
   },
   {
     "revision": "7823de71dbed6c889c338fb88d858574",

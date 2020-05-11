@@ -1,9 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-// import Nav from './Nav'
-import Settings from './Settings'
-import App from './App'
-import AssetViewer from './AssetViewer'
+import Routes from '../routes/Routes'
 
 const initialSettings = {
   settingsIsOpen: false,
@@ -46,10 +42,8 @@ function settingsReducer (state, action) {
   }
 }
 
-export default function RoutesNavAndSettings ({ states, dispatchers, actionDefs, api }) {
+function SettingsDataLayer ({ states, dispatchers, actionDefs, api }) {
   const [settingsState, settingsDispatcher] = React.useReducer(settingsReducer, initialSettings)
-
-  const { BASE_URL } = states.envsDepsMocksState.envs
 
   const _dispatchers = {
     ...dispatchers,
@@ -66,18 +60,7 @@ export default function RoutesNavAndSettings ({ states, dispatchers, actionDefs,
     settingsActionDefs
   }
 
-  return (
-    <Router basename={BASE_URL}>
-      <Switch>
-        <Route exact path="/">
-          <App states={_states} dispatchers={_dispatchers} actionDefs={_actionDefs} api={api} />
-        </Route>
-        <Route exact path="/assets">
-          <AssetViewer states={_states} dispatchers={_dispatchers} actionDefs={_actionDefs} api={api} />
-        </Route>
-      </Switch>
-      {/* <Nav /> */}
-      <Settings states={_states} dispatchers={_dispatchers} actionDefs={_actionDefs} api={api} />
-    </Router>
-  )
+  return <Routes states={_states} dispatchers={_dispatchers} actionDefs={_actionDefs} api={api} />
 }
+
+export default SettingsDataLayer

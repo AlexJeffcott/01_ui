@@ -1,9 +1,9 @@
 import React from 'react'
 import './App.css'
-import { audio } from './assets'
-import { UserSelect, TextToAudioImg, AudioImgToText } from './gameTypes'
+import { audio } from '../assets'
+import { UserSelect, TextToAudioImg, AudioImgToText } from '../gameTypes'
 
-const App = ({ states, dispatchers, actionDefs, api }) => {
+function App ({ states, dispatchers, actionDefs, api }) {
   // eslint-disable-next-line no-unused-vars
   const { getQs, getAnswers } = api
 

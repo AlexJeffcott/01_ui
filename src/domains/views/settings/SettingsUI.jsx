@@ -1,8 +1,8 @@
 import React from 'react'
-import { imgs } from './assets'
+import { imgs } from '../../../assets'
 import { Link } from 'react-router-dom'
 
-export default function Settings ({ states, dispatchers, actionDefs, api }) {
+function SettingsUI ({ states, dispatchers, actionDefs, api }) {
   const { settingsDispatcher } = dispatchers
   const { settingsIsOpen, lang, gameType, userName, course } = states.settingsState
   const { courses } = states.envsDepsMocksState.mocks
@@ -74,3 +74,5 @@ export default function Settings ({ states, dispatchers, actionDefs, api }) {
     </div>
   )
 }
+
+export default SettingsUI

@@ -3,7 +3,7 @@ import {
   Link
 } from 'react-router-dom'
 
-export default function Nav () {
+function NavUI () {
   return (
     <div className="navContainer">
       <Link to="/">Home</Link>
@@ -11,3 +11,5 @@ export default function Nav () {
     </div>
   )
 }
+
+export default NavUI

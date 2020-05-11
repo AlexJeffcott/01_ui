@@ -1,6 +1,6 @@
 import React from 'react'
-import './App.css'
-import { imgs, audio } from './assets'
+import '../../App.css'
+import { imgs, audio } from '../../../assets'
 
 export default function AssetViewer ({ states, dispatchers, actionDefs, api }) {
   const { questions } = states.envsDepsMocksState.mocks
